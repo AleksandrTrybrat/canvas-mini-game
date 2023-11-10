@@ -1,0 +1,72 @@
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,*:before,*:after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+} /* Меняет подсчет ширины блока для более простого подсчета размеров*/
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;} /*убирает крестик в инпуте на Майкрософт IE*/
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;} /*убирает отступы для кнопок в Mozila*/
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+a {
+  text-decoration: none;
+}
+/*=============================/RESET===================================*/
+
+body {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  /* background-color: #e0e0e0; */
+  background: url(../img/bg_title.jpg) 0 -50px / cover no-repeat;
+}
+.container {
+  margin: auto;
+}
+#canvasId {
+  width: 700px;
+  height: 700px;
+  border: 3px solid #57009a;
+  background-color: #fff;
+}
+
+#bg {
+  /* width: 550px;
+  height: 550px; */
+  display: none;
+}
+
+#hero {
+  height: 100px;
+  display: none;
+}
+
+#aim {
+  display: none;
+}
+
+#bullet {
+  display: none;
+}

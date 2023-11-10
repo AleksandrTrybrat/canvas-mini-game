@@ -1,0 +1,135 @@
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,*:before,*:after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+} /* Меняет подсчет ширины блока для более простого подсчета размеров*/
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;} /*убирает крестик в инпуте на Майкрософт IE*/
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;} /*убирает отступы для кнопок в Mozila*/
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+a {
+  text-decoration: none;
+}
+/*=============================/RESET===================================*/
+body {
+	min-height: 100vh;
+	overflow: hidden;
+	background: url(../img/bg_title.jpg) 0 -50px / cover no-repeat;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.start {
+	padding: 20px 70px;
+	margin-top: 120px;
+	margin-bottom: 20px;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	color: #fff;
+	background-color: #331b3d;
+	opacity: 0.7;
+	font-size: 32px;
+	font-weight: 700;
+}
+
+.start:hover, #button:hover {
+	opacity: 1;
+}
+
+#button {
+	padding: 15px 42px;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	color: #fff;
+	background-color: #331b3d;
+	opacity: 0.7;
+	font-size: 32px;
+	font-weight: 700;
+}
+
+.modal {
+	position: fixed;
+	left: 0;
+	top: 50px;
+	width: 100%;
+	height: 100vh;
+	z-index: 99998;
+	background-color: rgba(0, 0, 0, .3);
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	overflow-y: auto;
+	visibility: hidden;
+	opacity: 1;
+	transition: opacity .4s, visibility .4s;
+}
+
+.modal__box {
+	position: relative;
+	width: 450px;
+	padding: 50px;
+	z-index: 1;
+	margin: 30px 15px;
+	background-color: #b259d7;
+	color: #fff;
+	transform: scale(0);
+	transition: transform .8s;
+	text-align: center;
+}
+
+.modal.open {
+	visibility: visible;
+	opacity: 1;
+}
+
+.modal.open .modal__box {
+	transform: scale(1);
+}
+
+.modal__box p {
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 15px;
+	
+}
+
+.modal__box p:last-child {
+	margin-bottom: 0;
+}
+
+span {
+	color: #000;
+}
